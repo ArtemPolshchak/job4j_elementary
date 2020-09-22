@@ -7,7 +7,6 @@ public class Multiple {
             int a = 1;
             int res = a * i;
             System.out.println(res);
-
         }
     }
 }
