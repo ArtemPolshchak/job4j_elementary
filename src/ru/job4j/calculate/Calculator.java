@@ -1,6 +1,7 @@
-package ru.job4j.calculator;
+package ru.job4j.calculate;
 
 public class Calculator {
+
     public static void main(String[] args) {
         int one = 1;
         int two = 2;
@@ -14,7 +15,7 @@ public class Calculator {
         int onePlusTwo = one + two;
 
         System.out.println(onePlusTwo);
-        System.out.println(sixDivTwo);;
+        System.out.println(sixDivTwo);
         System.out.println(fiveMinusTwo);
         System.out.println(fourTimeTwo);
     }
