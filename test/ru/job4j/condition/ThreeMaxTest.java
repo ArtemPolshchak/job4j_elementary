@@ -31,12 +31,6 @@ public class ThreeMaxTest {
     }
 
     @Test
-    public void firstEqSecond() {
-        int result = ThreeMax.max(100, 100, 12);
-        assertThat(result, is(100));
-    }
-
-    @Test
     public void firstEqThird() {
         int result = ThreeMax.max(100, 3, 100);
         assertThat(result, is(100));
@@ -45,6 +39,12 @@ public class ThreeMaxTest {
     @Test
     public void secondEqThird() {
         int result = ThreeMax.max(5, 100, 100);
+        assertThat(result, is(100));
+    }
+
+    @Test
+    public void firstEqSecond() {
+        int result = ThreeMax.max(100, 100, 12);
         assertThat(result, is(100));
     }
 }

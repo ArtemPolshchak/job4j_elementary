@@ -14,12 +14,11 @@ public class CounterTest {
         assertThat(rsl, is(expected));
     }
 
+    @SuppressWarnings("checkstyle:EmptyLineSeparator")
     @Test
     public void whenSumEvenNumbersFromOneToTenThenThirty() {
         int rsl = Counter.sumByEven(1, 10);
         int expected = 30;
         assertThat(rsl, is(expected));
     }
-
-
 }
