@@ -37,5 +37,15 @@ public class PointTest {
         double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
     }
+    @Test
+    public void whenooooo() {
+        int expect = 2;
+        Point a = new Point(0, 0, 4);
+        Point b = new Point(0, 2, 4);
+        double out = a.distance3d(b);
+
+        Assert.assertEquals(expect, out, 0.01);
+
+    }
 }
 
