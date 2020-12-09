@@ -20,12 +20,18 @@ public class UserStore {
     }
 
     public static void main(String[] args) throws UserNotFoundException {
-        User[] users = {
-                new User("Petr Arsentev", true)
-        };
-        User user = findUser(users, "Petr Arsentev");
-        if (validate(user)) {
-            System.out.println("This user has an access");
+        try {
+            User[] users = {
+                    new User("Petr Arsentev", true)
+            };
+            User user = findUser(users, "Petr Arsentev");
+            if (validate(user)) {
+                System.out.println("This user has an access");
+            }
+        } catch (UserInvalidException userInvalidException) {
+            throw new UserInvalidException("Пользователь не валидный");
+        } catch (UserNotFoundException userNotFoundException) {
+            throw new UserNotFoundException("Пользьвателя не найдено");
         }
 
     }
