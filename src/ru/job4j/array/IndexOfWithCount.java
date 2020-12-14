@@ -5,7 +5,7 @@ public class IndexOfWithCount {
         int rsl = -1;
         char[] temp = new char[c];
         for (int index = 0; index < string.length; index++) { //0(a) < 4
-            if (string[index] == temp[])
+           rsl += rsl;
         }
         return rsl;
     }
