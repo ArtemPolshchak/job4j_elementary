@@ -35,7 +35,7 @@ public class IndexOfWithCountTest {
     @Test
     public void whenNumber2() {
         assertEquals(5, IndexOfWithCount.indexOf(
-                new char[] {'a', 'b', 'c', 'd', 'e', 'c'},
+                new char[] {'a', 'b', 'c', 'd', 'e', 'c', 's'},
                 'c',
                 2
         ));
