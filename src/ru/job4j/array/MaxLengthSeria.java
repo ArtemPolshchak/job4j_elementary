@@ -27,12 +27,4 @@ public class MaxLengthSeria {
         System.out.println(find(new int[] {2, 3, 4, 5}));
     }
 }
-=======
-        for (int index = 0; index < array.length; index++) {
-            if (array[index] < )
-        }
-        return count;
-    }
 
-}
->>>>>>> origin/master
