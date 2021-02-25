@@ -3,34 +3,27 @@ package ru.job4j.array;
 public class MaxLengthSeria {
     public static int find(int[] array) {
         int count = 0;
+
+        int tmp = 0;
+        int num1 = 0;
         int res = 0;
 
-        int tmp = 1;
-        int[] tmpCounts = new int[array.length];
+        for (int i : array) {
 
-        for (int index = 0; index < array.length; index++) {
-
-            if (array[index] >= tmp) {
-                tmp = array[index];
+            if (tmp <= i) {
+                tmp = i;
                 count++;
-                res = count;
             } else {
-                tmpCounts[index] = count;
+                num1 = count;
+
                 count = 0;
-            }
+                tmp = i;
+                count++;
 
-        }
-        for (int i = 0; i < tmpCounts.length - 1; i++) {
-            if (tmpCounts[i] >= tmpCounts[i + 1]) {
-                res = tmpCounts[i];
             }
         }
+        res = Math.max(num1, count);
         return res;
-
-    }
-
-    public static void main(String[] args) {
-        System.out.println(find(new int[] {2, 3, 4, 5}));
 
     }
 }
