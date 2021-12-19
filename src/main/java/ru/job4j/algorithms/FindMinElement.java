@@ -1,9 +1,5 @@
 package ru.job4j.algorithms;
 
-/**
- * @author User on 15.12.2021.
- * @project job4j_elementary
- */
 public class FindMinElement {
     public static void main(String[] args) {
         int[] array = new int[] {
