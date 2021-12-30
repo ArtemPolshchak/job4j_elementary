@@ -1,4 +1,4 @@
-package javarush.eightLvl;
+package javarush.eight;
 
 import java.io.*;
 

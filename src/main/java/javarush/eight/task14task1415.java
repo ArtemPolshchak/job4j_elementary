@@ -1,4 +1,4 @@
-package javarush.eightLvl;
+package javarush.eight;
 
 import java.util.ArrayList;
 import java.util.List;
