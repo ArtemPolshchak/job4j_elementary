@@ -1,7 +1,6 @@
-package javarush.eightLvl;
+package javarush.eight;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 
 /**
  * запись информации в файл
