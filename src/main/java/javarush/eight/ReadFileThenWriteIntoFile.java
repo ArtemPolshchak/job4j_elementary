@@ -1,16 +1,11 @@
-package javarush.eightLvl;
+package javarush.eight;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
 
 /*
 Сортировка четных чисел из файла
 */
-
 public class ReadFileThenWriteIntoFile {
     public static void main(String[] args) {
 
@@ -28,14 +23,11 @@ public class ReadFileThenWriteIntoFile {
             file = new File("D:/2.txt");
             fr = new FileWriter(file, true);
 
-
             while ((countBytes = isr.read()) != -1) {
                 if (countBytes % 2 == 0) {
                     fr.write((char) countBytes);
                 }
             }
-
-
         }  catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -55,6 +47,5 @@ public class ReadFileThenWriteIntoFile {
                 e.printStackTrace();
             }
         }
-
     }
 }
