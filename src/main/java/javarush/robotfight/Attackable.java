@@ -1,4 +1,4 @@
-package javarush.RobotFight;
+package javarush.robotfight;
 
 /**
  * @author User on 23.10.2021.

@@ -1,13 +1,12 @@
-package javarush.fiveLvl;
+package javarush.five;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class BeginToArray {
-    public static void main(String[] args) throws  Exception{
+    public static void main(String[] args) throws  Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         ArrayList<String> list = new ArrayList<>();
 

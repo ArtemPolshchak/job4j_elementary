@@ -1,4 +1,4 @@
-package javarush.eighteenLvl;
+package javarush.eighteen;
 
 import java.io.*;
 
@@ -49,7 +49,7 @@ public class AmigoOutputStream extends FileOutputStream {
     @Override
     public void close() throws IOException {
         fileOutputStream.flush();
-        fileOutputStream.write( "JavaRush © All rights reserved.".getBytes());
+        fileOutputStream.write("JavaRush © All rights reserved.".getBytes());
         fileOutputStream.close();
 
     }

@@ -1,4 +1,4 @@
-package javarush.eighteenLvl;
+package javarush.eighteen;
 
 import java.io.IOException;
 

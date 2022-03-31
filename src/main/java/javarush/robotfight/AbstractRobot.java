@@ -1,10 +1,10 @@
-package javarush.RobotFight;
+package javarush.robotfight;
 
 /**
  * @author User on 23.10.2021.
  * @project job4j_elementary_1
  */
-public abstract class AbstractRobot implements Attackable, Defensable{
+public abstract class AbstractRobot implements Attackable, Defensable {
     private static int hitCount;
     private String name;
 
