@@ -1,10 +1,8 @@
-package javarush.fiveLvl;
+package javarush.five;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Collections;
 
 /*
 Перестановочка подоспела
@@ -16,18 +14,18 @@ import java.util.Collections;
 Примечание: запрещено создавать больше одного списка.
 */
 
-public class task07task0720 {
+public class ChangeNumbers {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
        ArrayList<String> list = new ArrayList<>();
-       int N = Integer.parseInt(reader.readLine());
-       int M = Integer.parseInt(reader.readLine());
+       int n = Integer.parseInt(reader.readLine());
+       int m = Integer.parseInt(reader.readLine());
 
-       while (N > 0) {
+       while (n > 0) {
            list.add(reader.readLine());
-           N--;
+           n--;
        }
-       for (int i = 0; i < M; i++) {
+       for (int i = 0; i < m; i++) {
            String a = list.get(0);
            list.remove(0);
            list.add(a);

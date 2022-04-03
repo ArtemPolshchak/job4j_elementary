@@ -1,8 +1,7 @@
-package javarush.fiveLvl;
+package javarush.five;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
 
 /*
 Меняем функциональность
@@ -10,7 +9,7 @@ import java.io.InputStreamReader;
 обратная сортировка пузырьком
 */
 
-public class task07task0728 {
+public class ChangeFunctionality {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int[] array = new int[20];

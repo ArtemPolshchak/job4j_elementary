@@ -1,4 +1,4 @@
-package javarush.fiveLvl;
+package javarush.five;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 4. Выведи на экран строку из п.3. Должна быть выведена одна строка.
 */
 
-public class task07task0712 {
+public class CheckLinesWhichFirst {
     public static void main(String[] args) throws IOException {
        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
        ArrayList<String> list = new ArrayList<>();
@@ -22,7 +22,6 @@ public class task07task0712 {
        String maxWord = "";
        int sizeWords = 0;
 
-       
         for (int i = 0; i < 10; i++) {
             String s = reader.readLine();
             list.add(s);
