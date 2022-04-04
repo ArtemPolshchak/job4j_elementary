@@ -7,7 +7,7 @@ import java.util.List;
 Клининговый центр
 */
 
-public class task14task1415 {
+public class CleaningCenter {
     public static void main(String[] args) {
         List<Apartment> apartments = new ArrayList<Apartment>();
         apartments.add(new OneRoomApt());
