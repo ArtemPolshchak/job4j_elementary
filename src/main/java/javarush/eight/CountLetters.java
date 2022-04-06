@@ -16,7 +16,7 @@ import java.util.*;
  * ...
  * я 9
  */
-public class task10task1012 {
+public class CountLetters {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -36,7 +36,7 @@ public class task10task1012 {
             list.add(s.toLowerCase());
         }
 
-        Map<Character,Integer> map = new TreeMap<Character,Integer>();
+        Map<Character, Integer> map = new TreeMap<Character, Integer>();
         for (Character x:alphabet) {
             map.put(x, 0);
         }
