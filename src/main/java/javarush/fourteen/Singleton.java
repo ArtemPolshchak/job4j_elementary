@@ -1,6 +1,5 @@
 package javarush.fourteen;
 
-
 public class Singleton {
     private static Singleton instance;
 

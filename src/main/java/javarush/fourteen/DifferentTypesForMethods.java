@@ -13,8 +13,8 @@ public class DifferentTypesForMethods {
     public static void main(String[] args) throws IOException {
         //напиште тут ваш код
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String str = "";
-        while (!(str = reader.readLine()).equals("exit")) {
+        String str = reader.readLine();
+        while (!str.equals("exit")) {
         try {
             if (str.contains(".")) {
                 print(Double.parseDouble(str));
@@ -23,9 +23,11 @@ public class DifferentTypesForMethods {
             } else if (Short.parseShort(str) > 0 && Short.parseShort(str) < 128) {
                 print(Short.parseShort(str));
             }
+
         } catch (Exception e) {
             print(str);
         }
+            str = reader.readLine();
         }
     }
 

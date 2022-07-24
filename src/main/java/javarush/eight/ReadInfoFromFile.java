@@ -3,7 +3,6 @@ package javarush.eight;
 import java.io.InputStreamReader;
 import java.io.*;
 
-
 /**
 чтение информации из файла
 */
@@ -15,10 +14,9 @@ public class ReadInfoFromFile {
 
         int b = 0;
         try {
-
             fis = new FileInputStream("D:/1.txt");
             isr = new InputStreamReader(fis);
-           // isr = new InputStreamReader(fis, StandardCharsets.UTF_8); оба варианта работают
+            // isr = new InputStreamReader(fis, StandardCharsets.UTF_8); оба варианта работают
             while ((b = isr.read()) != -1) {
                 System.out.print((char) b);
             }

@@ -1,7 +1,6 @@
 package javarush.fourteen;
 
-
-public class Plane implements CanFly{
+public class Plane implements CanFly {
     public int num;
 
     public Plane(int num) {

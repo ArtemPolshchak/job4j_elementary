@@ -1,13 +1,10 @@
 package javarush.eight;
 
-
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-
 
 /**
  * @author Artem Polshchak on 30.12.2021.
@@ -22,7 +19,7 @@ public class FileInStaticBlock {
     public static List<String> lines = new ArrayList<String>();
 
     static {
-        File file = new File(Statics.FILE_NAME);
+        File file = new File(Statics.fileName);
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
             reader.lines().forEach(line -> {
@@ -32,6 +29,7 @@ public class FileInStaticBlock {
             e.printStackTrace();
         }
     }
+
     public static void main(String[] args) {
         System.out.println(lines);
     }

@@ -1,7 +1,5 @@
 package javarush.fourteen;
 
-
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -20,6 +18,7 @@ public class Solution {
         System.out.println(lines);
     }
 }
+
 class Statics {
-    public static String FILE_NAME = "D:/1.txt"/* add the path to your source file here */;
+    public static String fileName = "D:/1.txt"/* add the path to your source file here */;
 }

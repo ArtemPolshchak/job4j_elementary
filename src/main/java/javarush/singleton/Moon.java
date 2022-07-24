@@ -1,6 +1,5 @@
 package javarush.singleton;
 
-
 public class Moon implements Planet {
     private static Moon instance;
 

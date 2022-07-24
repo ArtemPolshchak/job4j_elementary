@@ -1,7 +1,6 @@
 package javarush.fourteen;
 
-
-public class LatteMaker extends DrinkMaker{
+public class LatteMaker extends DrinkMaker {
     @Override
     void getRightCup() {
         System.out.println("Берем чашку для латте");
