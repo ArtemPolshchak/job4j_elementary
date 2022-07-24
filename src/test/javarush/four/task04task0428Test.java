@@ -1,7 +1,8 @@
 package javarush.four;
 
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.*;
 
 public class task04task0428Test {
     @Test

@@ -8,11 +8,20 @@ public class IndexOfWithCount {
             if (c == value) {
                 tmp++;
             }
+            if (tmp == number) {
+                break;
+            }
         }
+        int tmp1 = 0;
         for (int index = 0; index < string.length; index++) {
 
-            if (string[index] == c && number == tmp) {
-                rsl = index;
+            if (string[index] == c) {
+                tmp1++;
+                if (tmp1 == tmp) {
+                    rsl = index;
+                    break;
+                }
+
             }
         }
         return rsl;
@@ -20,8 +29,9 @@ public class IndexOfWithCount {
     }
 
     public static void main(String[] args) {
-        String num = "adghetty";
+        String num1= "adghetty";
+        String num = "abcdec";
         char[] word = num.toCharArray();
-        System.out.println(indexOf(word, 't', 2));
+        System.out.println(indexOf(word, 'c', 1));
     }
 }

@@ -11,7 +11,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 
 /*
 Знакомство с тегами
@@ -22,9 +21,11 @@ public class ParseByTeg {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         BufferedReader fileReader = new BufferedReader(new FileReader(reader.readLine()));
         StringBuilder builder = new StringBuilder();
+
         while (fileReader.ready()) {
-            builder.append((char)fileReader.read());
+            builder.append((char) fileReader.read());
         }
+
         String text = builder.toString();
         Document document = Jsoup.parse(text, "", Parser.xmlParser());
         Elements h1 = document.select("span");
