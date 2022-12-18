@@ -11,13 +11,11 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static java.lang.Thread.sleep;
-
 public class TestMain {
     public static void main(String[] args) {
         System.setProperty("log4j.configurationFile", "./path_to_the_log4j2_config_file/log4j2.xml");
-        String url = "";
-        String lowPrice = null;
+        String url;
+        String lowPrice;
         int ceneoPrice = 1;
         File file = new File("parse.txt");
         ArrayList<String> urls = new ArrayList<>();
@@ -28,18 +26,18 @@ public class TestMain {
             url = value;
             System.out.println(file.getFreeSpace());
             try {
-                //cleaning txt
+
                 while (true) {
                     BufferedReader br = new BufferedReader(new FileReader("parse.txt"));
                     if (br.readLine() == null) {
                         break;
                     } else {
-                        RandomAccessFile raf = null;
+                        RandomAccessFile raf;
                         raf = new RandomAccessFile(file, "rw");
                         raf.setLength(0);
                     }
                 }
-                //connect to website
+
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -49,7 +47,7 @@ public class TestMain {
                 if (ceneoPrice != 0) {
                     break;
                 } else {
-                    Document doc = null;
+                    Document doc;
                     try {
                         FileOutputStream fos = new FileOutputStream(file);
                         doc = Jsoup.connect(url)
@@ -64,7 +62,7 @@ public class TestMain {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    //writing in txt
+
                     try (BufferedReader in = new BufferedReader(new FileReader("parse.txt"))) {
                         ArrayList<String> list = new ArrayList<>();
                         in.lines().forEach(list::add);
@@ -98,13 +96,12 @@ public class TestMain {
 
     public static void parseUrl(File file, String url) {
         try {
-            //cleaning txt
-            //connect to website
+
             Document doc = Jsoup.connect(url)
                     .userAgent("Mozilla/5.0 (Windows; U; WindowsNT 5.1; en-US; rv1.8.1.6) Gecko/20070725 Firefox/2.0.0.6")
                     .referrer("http://www.google.com")
                     .get();
-            //writing in txt
+
             PrintWriter out = new PrintWriter(new BufferedOutputStream(new FileOutputStream(file)));
             out.println(doc);
 
@@ -144,11 +141,11 @@ public class TestMain {
         try {
             FileInputStream fis = new FileInputStream("exel.xls");
             Workbook wb = new HSSFWorkbook(fis);
-            String urlToadd = null;
+            String urlToadd;
             for (int i = 0; i < 64; i++) {
                 urlToadd = wb.getSheetAt(0).getRow(i).getCell(1).getStringCellValue();
                 urls.add(urlToadd);
-                //System.out.println(urlToadd);
+                System.out.println(urlToadd);
             }
             fis.close();
         } catch (IOException e) {
@@ -157,7 +154,7 @@ public class TestMain {
     }
 
     public void writeInPriceExel(ArrayList<String> prices) {
-        FileInputStream fis = null;
+        FileInputStream fis;
         try {
             fis = new FileInputStream("exel.xls");
             Workbook wb = new HSSFWorkbook(fis);

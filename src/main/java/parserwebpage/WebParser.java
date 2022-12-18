@@ -85,8 +85,8 @@ public class WebParser {
                     .userAgent(documents.get(random.nextInt(12)))
                     .referrer("http://www.google.com")
                     .get();
-            /**
-             * document = Jsoup.connect(getPathURL())
+            /*
+            document = Jsoup.connect(getPathURL())
                     .userAgent(documents.get(3))
                     .referrer("http://www.google.com")
                     .get();
@@ -142,7 +142,7 @@ public class WebParser {
                     if (price.size() > 0) {
                         ceneoPrice = Integer.parseInt(price.get(0));
                         res = ceneoPrice;
-                        // System.out.println("Price on the TV: " + ceneoPrice);
+                        System.out.println("Price on the TV: " + ceneoPrice);
                     } else {
                         System.out.println("чет не так");
                     }
@@ -194,8 +194,11 @@ public class WebParser {
     }
 
     public static void main(String[] args) throws IOException {
-        // product:price:amount  фраза для поиска по склепзтв
-        //"lowPrice" -фраза для поиска по ценео
+        /*
+        product:price:amount  фраза для поиска по склепзтв
+        "lowPrice" -фраза для поиска по ценео
+        */
+
         GetTestDataFromExcel excel = new GetTestDataFromExcel();
         excel.getDataFromExcel();
         mapParse = excel.map;
@@ -218,7 +221,7 @@ public class WebParser {
                 e.printStackTrace();
             }
         }
-/*
+        /*
         for (Map.Entry<String, String> entry : result.entrySet()) {
             System.out.println(entry.getKey() + " - " + entry.getValue());
         }*/

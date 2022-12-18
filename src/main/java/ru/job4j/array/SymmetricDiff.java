@@ -58,7 +58,7 @@ public class SymmetricDiff {
                 cnt++;
             }
         }
-       // Arrays.copyOf(numsForTrue, cnt );
+
         int[] result = new int[cnt];
         System.arraycopy(numsForTrue, 0, result, 0, result.length);
         Arrays.sort(result);

@@ -15,16 +15,15 @@ import java.util.List;
  * @project Practice IO
  */
 public class ChanelExample {
-    public static void main(String[] args)throws Exception {
+    public static void main(String[] args) throws Exception {
         transferDemo();
 
-        //метод позволяет вместить в массив строк все строки с файла
         List<String> lines = Files.readAllLines(Paths.get("D:\\example.xml"));
         System.out.println(lines.size());
         System.out.println(lines.get(20));
     }
 
-    public static void demoChanel() throws  Exception {
+    public static void demoChanel() throws Exception {
         FileInputStream fileInputStream = new FileInputStream("D:\\example.xml");
         FileOutputStream fileOutputStream = new FileOutputStream("D:\\testForRead.xml");
         FileChannel inChanel = fileInputStream.getChannel();
@@ -37,7 +36,7 @@ public class ChanelExample {
             inBuffer.flip();
 
             while (inBuffer.hasRemaining()) {
-               byte get = inBuffer.get();
+                byte get = inBuffer.get();
                 outBuffer.put(get);
             }
             outBuffer.flip();
@@ -52,6 +51,7 @@ public class ChanelExample {
 
     /**
      * метод записывает байты из одного файла в другой. может записывать с текста в хмл
+     *
      * @throws Exception
      */
     public static void transferDemo() throws Exception {

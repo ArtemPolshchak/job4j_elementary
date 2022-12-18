@@ -14,7 +14,5 @@ public class DiffArrayTest {
         assertArrayEquals(new int[] {1, 3}, DiffArray.diff(new int[] {1, 2, 3}, new int[] {2}));
         assertArrayEquals(new int[] {1, 3}, DiffArray.diff(new int[] {1, 3}, new int[] {2}));
         assertArrayEquals(new int[] {3}, DiffArray.diff(new int[] {2, 3}, new int[] {1, 2}));
-       // assertArrayEquals(new int[] {1, 3, 4, 6}, DiffArray.diff(new int[] {1, 2, 3, 4, 5, 6, 7}, new int[] {2, 5, 7, 8}));
-
     }
 }

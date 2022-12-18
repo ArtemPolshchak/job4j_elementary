@@ -5,9 +5,9 @@ import java.util.Arrays;
 public class DiffArray {
     public static int[] diff(int[] left, int[] right) {
         int count = 0;
-        int[] array = new int[left.length + right.length]; //результирующий массив
+        int[] array = new int[left.length + right.length];
         int rlength = right.length;
-        //метод чтоб проверить если правый массив пустой, то записать все елементы с левого массива в резултирующий
+
         if (right.length == 0) {
             return left;
         }
@@ -35,5 +35,4 @@ public class DiffArray {
         }
         return Arrays.copyOf(array, count);
     }
-
 }

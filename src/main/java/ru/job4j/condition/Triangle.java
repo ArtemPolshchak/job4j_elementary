@@ -2,9 +2,6 @@ package ru.job4j.condition;
 
 public class Triangle {
 
-    //public static boolean exist(double ab, double ac, double bc) {
-        //return (ab + ac > bc) && (ac + bc > ab) && (ab + bc > ac);
-    //}
     private final Point first;
     private final Point second;
     private final Point third;
@@ -30,10 +27,8 @@ public class Triangle {
         double bc = second.distance(third);
         double p = period(ab, ac, bc);
         if (this.exist(ab, ac, bc)) {
-                rsl = Math.sqrt(p * (p - ab) * (p - ac) * (p - bc));
-
+            rsl = Math.sqrt(p * (p - ab) * (p - ac) * (p - bc));
         }
         return rsl;
     }
-
 }

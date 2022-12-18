@@ -29,14 +29,14 @@ class GetTestDataFromExcel {
      */
     public void getDataFromExcel() {
         try {
-            // Specify the path of file
+
             File src = new File(exelFileToBeRead);
             if (!src.exists()) {
                 System.out.println("file does not exist");
             }
-            // load file
+
             FileInputStream fis = new FileInputStream(src);
-            // Load workbook
+
             XSSFWorkbook wb = new XSSFWorkbook(fis);
 
             for (int i = 0; i < 10; i++) {

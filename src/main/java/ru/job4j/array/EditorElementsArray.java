@@ -23,6 +23,5 @@ public class EditorElementsArray {
         int[][] array = {{1, 8, 3}, {2, 4, 11}, {-10, 6, 5}};
         int el = 3;
         System.out.println(Arrays.deepToString(changeData(array, el)));
-        //{{0, 5, 0}, {0, 1, 8}, {0, 3, 2}}
     }
 }
