@@ -10,9 +10,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class WebParser {
-    //todo Написать метод записи результатов в ексельфайл
-    //todo написать метод сравнения прошлых результатов и нынешних
-    //todo написать метод, который выводит на экран изменившиеся модели
+    /*  Написать метод записи результатов в ексельфайл
+    написать метод сравнения прошлых результатов и нынешних
+     написать метод, который выводит на экран изменившиеся модели
+     */
 
     public static String exelFileToBeWritten = "d:/fileResult1.xlsx";
 
@@ -26,7 +27,9 @@ public class WebParser {
     private static Map<String, String> result = new HashMap<>();
 
     public void writeDataToExel() {
-        //todo написать метод который записывает результаты в ексель файл
+        /*
+         написать метод который записывает результаты в ексель файл
+         */
     }
     /**
      * Конструктор
