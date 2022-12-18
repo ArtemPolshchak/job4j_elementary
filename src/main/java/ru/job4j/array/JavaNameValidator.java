@@ -43,7 +43,7 @@ public class JavaNameValidator {
      * @return result true of false
      */
     public static boolean isUpperLatinLetter(int code) {
-        return code >=65 && code <= 90;
+        return code >= 65 && code <= 90;
     }
 
     /**
