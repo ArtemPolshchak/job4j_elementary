@@ -22,13 +22,13 @@ public class DiffArray {
                         break;
                     }
                     array[count] = 0;
-                    if (array[count] == 0 || array[count -1] != left[i - 1]) {
+                    if (array[count] == 0 || array[count - 1] != left[i - 1]) {
                         count--;
                     }
                     right[j] = right[rlength - 1];
                     rlength--;
                     if (rlength == 0) {
-                        array[count++] = left[i+1];
+                        array[count++] = left[i + 1];
                     }
                 }
             }

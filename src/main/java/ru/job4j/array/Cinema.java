@@ -40,6 +40,7 @@ public class Cinema {
             Place place = (Place) o;
             return row == place.row && cell == place.cell;
         }
+
         @Override
         public int hashCode() {
             return Objects.hash(row, cell);

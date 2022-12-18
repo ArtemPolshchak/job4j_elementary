@@ -17,9 +17,6 @@ public class OrArray {
         Arrays.sort(merge);
         int k = merge.length;
 
-
-
-
         for (int i = 0; i < k; i++) {
             for (int j = i + 1; j < k; j++) {
                 if (merge[i] == merge[j]) {

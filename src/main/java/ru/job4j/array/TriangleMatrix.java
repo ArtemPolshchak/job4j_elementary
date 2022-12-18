@@ -20,7 +20,6 @@ public class TriangleMatrix {
         return triangle;
     }
 
-
     public static void main(String[] args) {
         System.out.println(Arrays.deepToString(rows(4)) + System.lineSeparator());
     }

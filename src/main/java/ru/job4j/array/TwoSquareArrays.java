@@ -11,8 +11,7 @@ public class TwoSquareArrays {
                 count++;
             }
         }
-       int[] mass = new int[count];
-
+        int[] mass = new int[count];
 
         for (int i = 0; i < left.length; i++) {
             for (int j = 0; j < left[i].length; j++) {
@@ -23,7 +22,6 @@ public class TwoSquareArrays {
 
         return mass;
     }
-
 
     public static void main(String[] args) {
         int[][] left = {{1, 10, 55}, {16, 32, 40}, {4, 27, 7}};

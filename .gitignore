@@ -18,3 +18,4 @@ target
 
 out
 *.log
+/src/main/java/javarush/

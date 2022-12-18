@@ -8,9 +8,11 @@ public class Builder extends Engineer {
     public String getBuildingType() {
         return buildingType;
     }
+
     public int getNumberOfObjects() {
         return numberOfObjects;
     }
+
     @Override
     public String getName() {
         return super.getName();

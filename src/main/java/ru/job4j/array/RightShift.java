@@ -14,7 +14,6 @@ public class RightShift {
 
     }
 
-
     public static void shift(int[] nums) {
         int size = nums.length;
         int tmp = nums[size - 1];

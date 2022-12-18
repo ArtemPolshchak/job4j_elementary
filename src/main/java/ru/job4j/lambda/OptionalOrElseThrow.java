@@ -18,7 +18,9 @@ public class OptionalOrElseThrow {
         }
     }
 
-    public static class UserNotFoundException extends RuntimeException{}
+    public static class UserNotFoundException extends RuntimeException {
+
+    }
 
     public static User orElseThrow(List<User> list, String login) {
         Optional<User> optional = Optional.of(search(list, login).orElseThrow(UserNotFoundException::new));

@@ -7,8 +7,6 @@ public class Programmer extends Engineer {
         return typeOfProgram;
     }
 
-
-
     @Override
     public String getName() {
         return super.getName();

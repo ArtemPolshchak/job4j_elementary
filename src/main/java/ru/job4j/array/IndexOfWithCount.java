@@ -29,7 +29,6 @@ public class IndexOfWithCount {
     }
 
     public static void main(String[] args) {
-        String num1= "adghetty";
         String num = "abcdec";
         char[] word = num.toCharArray();
         System.out.println(indexOf(word, 'c', 1));

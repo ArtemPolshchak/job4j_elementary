@@ -13,7 +13,6 @@ public class EvenVsOdd {
             }
         }
 
-
         if (firstTeam > secondTeam) {
             return 1;
         } else if (secondTeam > firstTeam) {

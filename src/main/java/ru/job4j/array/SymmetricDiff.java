@@ -7,13 +7,11 @@ public class SymmetricDiff {
 
         int sumArraysLength = left.length + right.length;
 
-        //метод чтоб проверить если правый массив пустой, то записать все елементы с левого массива в резултирующий, и наоборот
         if (right.length == 0) {
             return left;
         } else if (left.length == 0) {
             return right;
         }
-
 
         boolean resTry = false;
         int[] numsForTrue = new int[sumArraysLength];

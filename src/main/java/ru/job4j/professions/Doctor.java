@@ -11,8 +11,6 @@ public class Doctor extends Profession {
         return diagnosis;
     }
 
-
-
     @Override
     public String getName() {
         return super.getName();

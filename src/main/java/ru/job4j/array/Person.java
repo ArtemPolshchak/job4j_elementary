@@ -39,7 +39,7 @@ public class Person {
 
         String test = person.getAddress() + " " + person.getName();
         System.out.println(test);
-        if ( person.getName().contains("a4r")) {
+        if (person.getName().contains("a4r")) {
             System.out.println("ohoho");
         } else {
             System.out.println("fuck Off");

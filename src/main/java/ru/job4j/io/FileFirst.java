@@ -36,7 +36,7 @@ public class FileFirst {
         Writer writer = new FileWriter("D:\\testForRead.xml");
 
         char[] buffer = new char[4096];
-        int num =reader.read(buffer);
+        int num = reader.read(buffer);
 
         while (num != -1) {
             writer.write(buffer, 0, num);
@@ -59,14 +59,10 @@ public class FileFirst {
         fis.close();
         reader.close();
         bufferedReader.close();
-
     }
 
     public static void demoMemory() {
         ByteArrayInputStream stream = new ByteArrayInputStream(new byte[10]);
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-
     }
-
-
 }

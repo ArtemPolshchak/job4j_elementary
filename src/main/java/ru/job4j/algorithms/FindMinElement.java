@@ -17,7 +17,5 @@ public class FindMinElement {
 
         System.out.println(minIndex);
         System.out.println(minValue);
-
-
     }
 }

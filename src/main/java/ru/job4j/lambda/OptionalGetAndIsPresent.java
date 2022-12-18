@@ -7,7 +7,7 @@ public class OptionalGetAndIsPresent {
     public static int get(int[] data, int el) {
         Optional<Integer> num = indexOf(data, el);
         int result = -1;
-        if (num.isPresent()){
+        if (num.isPresent()) {
             result = num.get();
         }
         return result;

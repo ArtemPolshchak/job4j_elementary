@@ -28,9 +28,6 @@ public class Root {
 
     @Override
     public String toString() {
-        return "Root{" +
-                "name='" + name + '\'' +
-                ", people=" + people +
-                '}';
+        return "Root{" + "name='" + name + '\'' + ", people=" + people + '}';
     }
 }

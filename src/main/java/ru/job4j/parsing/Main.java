@@ -39,15 +39,15 @@ public class Main {
             System.out.println(rootChild.item(i).getNodeName());
 
             switch (rootChild.item(i).getNodeName()) {
-                case "name":
+                case "name" -> {
                     mainName = rootChild.item(i).getTextContent();
                     System.out.println("Main name = " + mainName);
-                    break;
-
-                case "people":
+                }
+                case "people" -> {
                     peopleNode = rootChild.item(i);
-                    break;
-
+                }
+                default -> {
+                }
             }
         }
 
@@ -83,6 +83,8 @@ public class Main {
                     case "age" :
                         age = Integer.parseInt(elementChilds.item(j).getTextContent());
                         break;
+
+                    default:
 
                 }
             }
