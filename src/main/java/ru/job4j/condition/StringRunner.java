@@ -5,6 +5,7 @@ package ru.job4j.condition;
  * @project job4j_elementary
  */
 public class StringRunner {
+
     public static void main(String[] args) {
         String idea = "I like Java!";
         System.out.println(idea);
