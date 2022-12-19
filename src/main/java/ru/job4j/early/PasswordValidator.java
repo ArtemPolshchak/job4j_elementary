@@ -7,7 +7,7 @@ package ru.job4j.early;
  */
 public class PasswordValidator {
 
-    private static final String[] words = new String[] {"qwerty", "12345", "password", "admin", "user"};
+    private static final String[] WORDS = new String[] {"qwerty", "12345", "password", "admin", "user"};
 
     /**
      * Method checks the password for compliance with the necessary conditions
@@ -39,7 +39,7 @@ public class PasswordValidator {
             throw new IllegalArgumentException("Password should contain at least one special symbol");
         }
 
-        for (String s : words) {
+        for (String s : WORDS) {
             if (password.toLowerCase().contains(s)) {
                 throw new IllegalArgumentException("Password shouldn't contain substrings: "
                         + "qwerty, 12345, password, admin, user");
