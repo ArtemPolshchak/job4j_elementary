@@ -9,27 +9,34 @@ public class JavaNameValidator {
 
     /**
      * Method checks tha validity of names
+     *
      * @param name input parameter for check
      * @return boolean true if name is valid or false if the name is not valid
      */
     public static boolean isNameValid(String name) {
-        boolean result = false;
-        if (name.length() > 0 && isLowerLatinLetter(name.charAt(0))) {
-            for (int i = 1; i < name.length(); i++) {
-                char res = name.charAt(i);
-                if (isSpecialSymbol(res)
-                        || isUpperLatinLetter(res)
-                        || isLowerLatinLetter(res)
-                        || Character.isDigit(res)) {
-                    result = true;
-                }
+        if (name.length() == 0) {
+            return false;
+        }
+
+        if (!isLowerLatinLetter(name.charAt(0))) {
+            return false;
+        }
+
+        for (int i = 1; i < name.length(); i++) {
+            char res = name.charAt(i);
+            if (!isLowerLatinLetter(res)
+                    && !isUpperLatinLetter(res)
+                    && !isSpecialSymbol(res)
+                    && !Character.isDigit(res)) {
+                return false;
             }
         }
-        return result;
+        return true;
     }
 
     /**
      * Method check if the character is a dollar sign and lowerCase
+     *
      * @param code int with char number in unicode for check what symbol is it
      * @return result true of false
      */
@@ -39,6 +46,7 @@ public class JavaNameValidator {
 
     /**
      * Method check if the character is an upperCase latin character
+     *
      * @param code int with char number in unicode for check what symbol is it
      * @return result true of false
      */
@@ -48,6 +56,7 @@ public class JavaNameValidator {
 
     /**
      * Method check if the character is an lowerCase latin character
+     *
      * @param code int with char number in unicode for check what symbol is it
      * @return result true of false
      */
