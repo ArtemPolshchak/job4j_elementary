@@ -14,11 +14,7 @@ public class JavaNameValidator {
      * @return boolean true if name is valid or false if the name is not valid
      */
     public static boolean isNameValid(String name) {
-        if (name.length() == 0) {
-            return false;
-        }
-
-        if (!isLowerLatinLetter(name.charAt(0))) {
+        if (name.length() == 0 || !isLowerLatinLetter(name.charAt(0))) {
             return false;
         }
 
