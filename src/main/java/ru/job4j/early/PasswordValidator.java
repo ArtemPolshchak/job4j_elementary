@@ -23,20 +23,42 @@ public class PasswordValidator {
             throw new IllegalArgumentException("Password should be length [8, 32]");
         }
 
-        if (!isUpperLatinLetter(password)) {
-            throw new IllegalArgumentException("Password should contain at least one uppercase letter");
+        boolean isUpperLetter = false;
+        boolean isLowerLetter = false;
+        boolean isDigit = false;
+        boolean isSpecialSymbol = false;
+
+        for (char temp : password.toCharArray()) {
+            if (Character.isUpperCase(temp)) {
+                isUpperLetter = true;
+            }
+            if (Character.isLowerCase(temp)) {
+                isLowerLetter = true;
+            }
+            if (Character.isDigit(temp)) {
+                isDigit = true;
+            }
+            if (!Character.isDigit(temp) && !Character.isLetter(temp)) {
+                isSpecialSymbol = true;
+            }
         }
 
-        if (!isLowerLatinLetter(password)) {
-            throw new IllegalArgumentException("Password should contain at least one lowercase letter");
-        }
+        if (!isUpperLetter || !isLowerLetter || !isDigit || !isSpecialSymbol) {
+            if (!isUpperLatinLetter(password)) {
+                throw new IllegalArgumentException("Password should contain at least one uppercase letter");
+            }
 
-        if (!isDigitLetter(password)) {
-            throw new IllegalArgumentException("Password should contain at least one figure");
-        }
+            if (!isLowerLatinLetter(password)) {
+                throw new IllegalArgumentException("Password should contain at least one lowercase letter");
+            }
 
-        if (!isSpecialSymbol(password)) {
-            throw new IllegalArgumentException("Password should contain at least one special symbol");
+            if (!isDigitLetter(password)) {
+                throw new IllegalArgumentException("Password should contain at least one figure");
+            }
+
+            if (!isSpecialSymbol(password)) {
+                throw new IllegalArgumentException("Password should contain at least one special symbol");
+            }
         }
 
         for (String s : WORDS) {
