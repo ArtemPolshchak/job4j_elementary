@@ -53,7 +53,8 @@ class PasswordValidatorTest {
                 IllegalArgumentException.class,
                 () -> PasswordValidator.validate(password)
         );
-        String expected = "Password should contain at least one uppercase letter";
+        String expected = "Password should contain at least one uppercase letter, " +
+                "one lowercase letter, one figure, one special symbol";
         assertThat(exception.getMessage()).isEqualTo(expected);
     }
 
@@ -64,7 +65,8 @@ class PasswordValidatorTest {
                 IllegalArgumentException.class,
                 () -> PasswordValidator.validate(password)
         );
-        String expected = "Password should contain at least one lowercase letter";
+        String expected = "Password should contain at least one uppercase letter, " +
+                "one lowercase letter, one figure, one special symbol";
         assertThat(exception.getMessage()).isEqualTo(expected);
     }
 
@@ -75,7 +77,8 @@ class PasswordValidatorTest {
                 IllegalArgumentException.class,
                 () -> PasswordValidator.validate(password)
         );
-        String expected = "Password should contain at least one figure";
+        String expected = "Password should contain at least one uppercase letter, " +
+                "one lowercase letter, one figure, one special symbol";
         assertThat(exception.getMessage()).isEqualTo(expected);
     }
 
@@ -86,7 +89,7 @@ class PasswordValidatorTest {
                 IllegalArgumentException.class,
                 () -> PasswordValidator.validate(password)
         );
-        String expected = "Password should contain at least one special symbol";
+        String expected = "Password should contain at least one uppercase letter, one lowercase letter, one figure, one special symbol";
         assertThat(exception.getMessage()).isEqualTo(expected);
     }
 
