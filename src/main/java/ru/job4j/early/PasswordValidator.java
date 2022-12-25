@@ -44,8 +44,8 @@ public class PasswordValidator {
         }
 
         if (!isUpperLetter || !isLowerLetter || !isDigit || !isSpecialSymbol) {
-            throw new IllegalArgumentException("Password should contain at least one uppercase letter, " +
-                    "one lowercase letter, one figure, one special symbol");
+            throw new IllegalArgumentException("Password should contain at least one uppercase letter, "
+                    + "one lowercase letter, one figure, one special symbol");
         }
 
         for (String s : WORDS) {
