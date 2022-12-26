@@ -41,6 +41,9 @@ public class PasswordValidator {
             if (!Character.isDigit(temp) && !Character.isLetter(temp)) {
                 isSpecialSymbol = true;
             }
+            if (isUpperLetter && isLowerLetter && isDigit && isSpecialSymbol) {
+                break;
+            }
         }
 
         if (!isUpperLetter || !isLowerLetter || !isDigit || !isSpecialSymbol) {
